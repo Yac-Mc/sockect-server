@@ -12,6 +12,6 @@ tsc -w
 
 Levantar servidor, cualquiera de estos dos comandos
 ```
-nodeom dist
-node dist/
+nodeom dist/
+node dist
 ```
