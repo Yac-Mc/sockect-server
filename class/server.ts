@@ -44,6 +44,9 @@ export default class Server{
 
             // Desconectar
             socket.DESCONECTAR(cliente);
+
+            // Login
+            socket.LOGIN(cliente, this.io);
         })
 
     }
