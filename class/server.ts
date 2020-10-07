@@ -40,17 +40,20 @@ export default class Server{
 
             console.log(`Cliente con SocketcId ${cliente.id} conetcado`);
 
-            //Conectar cliente
-            socket.CONECTARCLIENTE(cliente);
+            // Conectar cliente
+            socket.CONECTARCLIENTE(cliente, this.io);
             
             // Configuración de usuario
             socket.CONFIGURACIONUSUARIO(cliente, this.io);
+
+            // Obtener usuarios activos
+            socket.OBTENERUSUARIOS(cliente, this.io);
 
             // Mensaje
             socket.MENSAJE(cliente, this.io);
 
             // Desconectar
-            socket.DESCONECTAR(cliente);
+            socket.DESCONECTAR(cliente, this.io);
             
         })
 

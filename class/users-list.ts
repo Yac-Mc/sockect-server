@@ -31,7 +31,7 @@ export class UsersList{
 
     //Obtener lista de usuario
     public getListUsers(){
-        return this.list;
+        return this.list.filter(usuario => usuario.name !== 'sin-nombre');
     }
 
     //Obtener un usuario
