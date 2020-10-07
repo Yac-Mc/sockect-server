@@ -29,8 +29,6 @@ export const MENSAJE = (cliente: Socket, io: socketIO.Server) => {
 
     cliente.on('mensaje', (payload: {de: string, cuerpo: string}) => {
 
-        console.log(`Mensaje recibido`, payload);
-
         io.emit('mensaje-nuevo', payload );
 
     })
